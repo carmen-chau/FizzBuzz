@@ -15,7 +15,6 @@ class FizzBuzz {
 
     public static int doFizzBuzz(int i) { // Note: Making this method public s.t it is accessible for calling in Main.kava
         // Find out which numbers divide i.
-        i++;
         boolean divisibleBy3 = i % 3 == 0;
         boolean divisibleBy5 = i % 5 == 0;
 
@@ -37,6 +36,7 @@ class FizzBuzz {
             System.out.println(i);
 
         }
+        i++; // NOTE: The accumulator of i NEEDS TO GO AT THE VERY END, as your print statement relies on having the correct value of i.
         return i;
     }
 }
