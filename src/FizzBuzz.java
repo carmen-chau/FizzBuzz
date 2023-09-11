@@ -9,11 +9,11 @@ class FizzBuzz {
         int i = 1; // Defining the loop variable prior to executing while loop
         while (i < 100){
 
-            i = getI(i);
+            i = doFizzBuzz(i);
         }
     }
 
-    private static int getI(int i) {
+    public static int doFizzBuzz(int i) { // Note: Making this method public s.t it is accessible for calling in Main.kava
         // Find out which numbers divide i.
         i++;
         boolean divisibleBy3 = i % 3 == 0;
